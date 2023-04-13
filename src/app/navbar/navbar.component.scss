@@ -1,0 +1,42 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(69, 69, 221);
+  display: flex;
+  align-items: center;
+}
+
+.avatarN {
+  display: flex;
+  align-items: center;
+}
+
+.avatarN img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  margin-left: 10px;
+}
+
+.navbarText {
+ color: white;
+ margin-right: 10px;
+ font-size: 20px;
+}
+
+.navbarMenu {
+  list-style: none;
+  display: flex;
+}
+
+.navbarMenu li {
+  margin-right: 15px;
+}
+
+.navbarMenu a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
