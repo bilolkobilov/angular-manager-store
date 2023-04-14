@@ -125,4 +125,32 @@ export const customers = [
     details: 'View Orders',
     avatar: 'assets/images/woman.png'
   },
+  {
+    id:17,
+    name: 'Tonya Smith',
+    address: 'Atlanta, Georgia',
+    details: 'View Orders',
+    avatar: 'assets/images/woman.png'
+  },
+  {
+    id:18,
+    name: 'Tonya Smith',
+    address: 'Atlanta, Georgia',
+    details: 'View Orders',
+    avatar: 'assets/images/woman.png'
+  },
+  {
+    id:19,
+    name: 'Tonya Smith',
+    address: 'Atlanta, Georgia',
+    details: 'View Orders',
+    avatar: 'assets/images/woman.png'
+  },
+  {
+    id:20,
+    name: 'Tonya Smith',
+    address: 'Atlanta, Georgia',
+    details: 'View Orders',
+    avatar: 'assets/images/woman.png'
+  },
 ]

@@ -1,34 +1,40 @@
-<div class="container">
+<<div class="container">
   <div class="small-container">
     <i class="fas fa-user"></i>
     <h1 class="user-text">Customers</h1>
   </div>
-    <ul class="options-icon">
-      <li><a href="#"><i class="fas fa-th-large"></i>Card View</a></li>
-      <li><a href="#"><i class="fas fa-list-ul"></i>List View</a></li>
-      <li><a href="#"><i class="fas fa-map-marker-alt"></i>Map View</a></li>
-      <li><a href="#"><i class="fas fa-plus-circle"></i>New Customer</a></li>
-    </ul>
+  <ul class="options-icon">
+    <li><a href="#"><i class="fas fa-th-large"></i>Card View</a></li>
+    <li><a href="#"><i class="fas fa-list-ul"></i>List View</a></li>
+    <li><a href="#"><i class="fas fa-map-marker-alt"></i>Map View</a></li>
+    <li><a href="#"><i class="fas fa-plus-circle"></i>New Customer</a></li>
+  </ul>
   <div class="content">
-    <div class="cart" *ngFor="let customer of customers">
+    <div class="cart" *ngFor="let customer of customersForCurrentPage">
       <div class="cart-header">
         <span>{{customer.name}}</span>
         <a href="#" class="edit-icon"><i class="far fa-edit"></i></a>
       </div>
-     <div class="cart-body">
-      <img [src]="customer.avatar"> 
+      <div class="cart-body">
+        <img [src]="customer.avatar"> 
         <div class="cart-text">
           <p>{{customer.address}}</p>
           <h4>{{customer.details}}</h4>
         </div>
-       </div>
-     </div>
+      </div>
+    </div>
   </div>
   <div class="pagination">
-    <a href="#" class="prev">&laquo; Previous</a>
-    <a href="#" class="active">1</a>
-    <a href="#" class="next">Next &raquo;</a>
+    <button [disabled]="currentPage === 1" (click)="currentPage = currentPage - 1">&laquo;</button>
+    <span *ngFor="let page of pages" 
+          (click)="currentPage = page" 
+          [class.pagination-number]="true"
+          [class.active]="currentPage === page">
+      {{ page }}
+    </span>
+    <button [disabled]="currentPage === totalPages" (click)="currentPage = currentPage + 1">&raquo;</button>
   </div>
+  
 </div>
 
 
