@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { customers } from '../customersData';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customers',
@@ -19,7 +20,7 @@ export class CustomersComponent {
     return this.customers.slice(startIndex, endIndex);
   }
 
-  constructor() {
+  constructor(private router: Router) {
     for (let i = 1; i <= this.totalPages; i++) {
       this.pages.push(i);
     }

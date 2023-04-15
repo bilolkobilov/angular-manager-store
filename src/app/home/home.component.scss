@@ -1,8 +1,14 @@
+
+.scrollable {
+  overflow-y: auto;
+  height: 100%;
+}
 .background-image {
   background-image: url('../../assets/images/home.png');
   background-size: cover;
-  height: calc(105vh - 50px);
+  height: calc(104.5vh - 50px);
 }
+
 
   
   

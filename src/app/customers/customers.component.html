@@ -1,26 +1,27 @@
-<<div class="container">
+<div class="container">
   <div class="small-container">
-    <i class="fas fa-user"></i>
-    <h1 class="user-text">Customers</h1>
+    <div class="user-text">
+      <span><i class="fas fa-user"></i>Customers</span>
+    </div>
+    <ul class="options-icon">
+      <li><a href="#" class="active-link2"><i class="fas fa-th-large"></i>Card View</a></li>
+      <li><a href="#" class="active-link2"><i class="fas fa-list-ul"></i>List View</a></li>
+      <li><a href="#" class="active-link2"><i class="fas fa-map-marker-alt"></i>Map View</a></li>
+      <li><a href="#" class="active-link2"><i class="fas fa-plus-circle"></i>New Customer</a></li>
+    </ul>
   </div>
-  <ul class="options-icon">
-    <li><a href="#"><i class="fas fa-th-large"></i>Card View</a></li>
-    <li><a href="#"><i class="fas fa-list-ul"></i>List View</a></li>
-    <li><a href="#"><i class="fas fa-map-marker-alt"></i>Map View</a></li>
-    <li><a href="#"><i class="fas fa-plus-circle"></i>New Customer</a></li>
-  </ul>
   <div class="content">
     <div class="cart" *ngFor="let customer of customersForCurrentPage">
       <div class="cart-header">
-        <span>{{customer.name}}</span>
-        <a href="#" class="edit-icon"><i class="far fa-edit"></i></a>
+        <a href="#" class="active-link">{{customer.name}}</a>
+        <a href="#"><i class="far fa-edit"></i></a>
       </div>
       <div class="cart-body">
         <img [src]="customer.avatar"> 
         <div class="cart-text">
-          <p>{{customer.address}}</p>
-          <h4>{{customer.details}}</h4>
-        </div>
+          <p class="cart-address">{{customer.address}}</p>
+          <a href="#" class="cart-view-order">View Orders</a>
+        </div>        
       </div>
     </div>
   </div>
@@ -34,7 +35,6 @@
     </span>
     <button [disabled]="currentPage === totalPages" (click)="currentPage = currentPage + 1">&raquo;</button>
   </div>
-  
 </div>
 
 

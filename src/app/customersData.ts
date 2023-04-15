@@ -2,7 +2,6 @@ export interface CustomersData {
   id: number;
   name: string;
   address: string;
-  details: string;
   avatar: string;
 }
 
@@ -11,7 +10,6 @@ export const customers = [
     id:1,
     name: 'Ted James',
     address: 'Phonix, Arizona',
-    details: 'View Orders',
     avatar: 'assets/images/boss.png'
   },
   {
@@ -122,7 +120,6 @@ export const customers = [
     id:16,
     name: 'Tonya Smith',
     address: 'Atlanta, Georgia',
-    details: 'View Orders',
     avatar: 'assets/images/woman.png'
   },
   {
