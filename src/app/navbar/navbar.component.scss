@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
 }
+
 .avatar-navbar img {
   width: 50px;
   height: 50px;
@@ -30,24 +31,43 @@
 
 .navbarMenu {
   display: flex;
-  justify-content: space-between;
   list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 20px;
+  font-size: 23px;
 }
 
+/* Non-active links */
+.navbarMenu li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover state for non-active links */
+.navbarMenu li a:hover:not(.active-link) {
+  background-color: rgb(164, 164, 202);
+  border-color: rgb(164, 164, 202);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Active link */
 .active-link {
   color: white;
-  background-color: rgb(69, 69, 221);
-  padding: 8px;
-  border-radius: 5px;
+  background-color: rgb(164, 164, 202);
+  padding: 10px;
+  border: 2px solid rgb(164, 164, 202);
+  border-radius: 10px;
   text-decoration: none;
-  transition: background-color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
+/* Hover state for active link */
 .active-link:hover {
-  background-color: navy;
+  background-color: rgb(131, 131, 197);
+  border-color: rgb(131, 131, 197);
+  transition: all 0.2s ease-in-out;
 }
 
-  
+
